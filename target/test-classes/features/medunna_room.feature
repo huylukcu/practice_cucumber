@@ -1,7 +1,7 @@
 @MedunnaRoom
 Feature: Medunna Room Creation
 
-  Scenario Outline: Create Room
+  Background: Sign In Medunna
     Given user is on "https://medunna.com/" page
     When click on user icon
     And click on Sign In option
@@ -9,6 +9,9 @@ Feature: Medunna Room Creation
     And enter "John.123" in Password input
     And click on Remember Me checkbox
     And click on Sign In submit button
+
+
+  Scenario Outline: Create Room
     And click on Items&Titles
     And click on Room option
     And click on Create a new room button
@@ -23,8 +26,9 @@ Feature: Medunna Room Creation
     And close the application
     Examples:
       | room_number | price | description |
-      | 534536      | 123   | Good        |
-      | 534536      | 123   | Good        |
-      | 534536      | 123   | Good        |
-      | 534536      | 123   | Good        |
-      | 534536      | 123   | Good        |
+      | 23768       | 129   | Good        |
+      | 237682      | 121   | Good        |
+      | 78543       | 567   | well        |
+      | 534536      | 123   | Perfect     |
+
+

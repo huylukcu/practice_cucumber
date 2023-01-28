@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        dryRun = true,
-        tags = "@MedunnaRoom"
+        dryRun = false,
+        tags = "@excel_customer_login"
 
 )
 public class Runner {

@@ -39,6 +39,7 @@ public class GoogleStepDefinitions {
 
     @When("user search for TeaPot")
     public void user_search_for_tea_pot() {
+
         googlePage.searchBox.sendKeys("TeaPot"+Keys.ENTER);
     }
     @Then("verify page title contains TeaPot")

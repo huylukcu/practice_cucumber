@@ -6,7 +6,7 @@ public class MedunnaSignInStepDefs {
 
     @When("click on user icon")
     public void click_on_user_icon() {
-      MedunnaHomePage.userIcon().click();
+      //MedunnaHomePage.userIcon().click();
 
     }
     @When("click on Sign In option")
