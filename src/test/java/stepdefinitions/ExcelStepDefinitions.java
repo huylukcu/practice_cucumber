@@ -22,7 +22,7 @@ public class ExcelStepDefinitions {
     List<Map<String,String>> allTestData;
     //    1. Create a login method
     public void login(){
-        Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
+        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
         homePage = new HomePage();
         loginPage =new LoginPage();
         ReusableMethods.waitFor(1);
@@ -46,9 +46,9 @@ public class ExcelStepDefinitions {
         ReusableMethods.waitFor(1);
     }
     @Given("user tries to login as {string}")
-    public void user_tries_to_login_as(String string) {
-        String path = "./src/test/java/resources/mysmoketestdata.xlsx";
-        String sheetName = "customer_info";
+    public void user_tries_to_login_as(String sheet) {
+        String path = "src/test/resources/testdata/mysmoketestdata (2).xlsx";
+        String sheetName = sheet;
         excelUtil = new ExcelUtil(path, sheetName);
 //        getDataList() method returns all excel data
 //        we stored that data in allTestData variable
@@ -71,7 +71,13 @@ public class ExcelStepDefinitions {
             Assert.assertTrue(homePage.userID.isDisplayed());
         }
     }
+    @Then("verify the application login is successful")
+    public void verify_the_application_login_is_successful() {
+
+    }
     @Then("capture the screenshot")
     public void capture_the_screenshot() {
     }
+
+
 }
