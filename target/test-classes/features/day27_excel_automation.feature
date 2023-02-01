@@ -5,3 +5,11 @@ Feature: excel_login_feature
     Then verify the application login is successful
     Then capture the screenshot
     Then close the application
+
+@admin_excel
+Feature: excel_login_feature
+  Scenario: TC_customer_credentials_test
+    Given user tries to login as "admin_info"
+    Then verify the application login is successful
+    Then capture the screenshot
+    Then close the application

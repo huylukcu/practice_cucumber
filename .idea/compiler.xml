@@ -9,5 +9,8 @@
         <module name="practice_cucumber" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="my-cucumber-project" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
